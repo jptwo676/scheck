@@ -3,8 +3,8 @@
 #Author: jptwo676
 #Date: 02/26/2025
 
-command_ex_raw=$"command example: ./scheck sha1 sha2"
-command_ex_file=$"command example: ./scheck file1 file2"
+command_ex_raw=$"command example: ./scheck -r sha1 sha2"
+command_ex_file=$"command example: ./scheck -f file1 file2"
 
 # normal route -r
 function raw_input()
@@ -29,11 +29,14 @@ function file_input()
 }
 
 # help
-# TODO completar
 function help(){
   echo "-f) file mode
   Uses files containing the sha256 signatures for comparisson.
   $command_ex_file"
+
+  echo "-r) raw mode
+  Uses the signatures directly.
+  $command_ex_raw"
 
 }
 
@@ -56,8 +59,8 @@ done
 if [ $# -eq 0 ] 
 then
   echo "No arguments provided.
-  $command_ex
-  -h for help"
+  Here's some help: "
+  help
   exit 1
 fi
 

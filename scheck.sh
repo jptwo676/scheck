@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+# Check if two signatures from sha256 (the only one I use) are the same
 #Author: jptwo676
 #Date: 02/26/2025
 

@@ -1,20 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
-# Check if two signatures from sha256 (the only one I use) are the same
+#Check if the contents of two arguments are the same
+#Can be used to compare SHA-256 signatures
 #Author: jptwo676
 #Date: 02/26/2025
 
-sha1=$1
-sha2=$2
 
-function compare_sha()
-{
-  echo "sha1 -> $sha1"
-  echo "sha2 -> $sha2"
+text1=$1
+text2=$2
 
-  [ "$sha1" == "$sha2" ] && echo "Same." || echo "Not the same."
-}
+echo "text1 -> $text1"
+echo "text2 -> $text2"
 
-compare_sha
+[ "$text1" == "$text2" ] && echo "Same." || echo "Not the same."
 
 

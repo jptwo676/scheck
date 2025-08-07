@@ -1,7 +1,7 @@
-Simple script for comparing sha256 signatures.
+Simple script for comparing sha256 signatures or any text.
 
 Usage example:
 
-./scheck sha1 sha2
+./scheck text1 text2
 
 
